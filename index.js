@@ -7,7 +7,9 @@ function fetchExchangeRate() {
       const rate = data.rates.KRW;
       console.log(`1 USD = ${rate} KRW`);
       const div1 = document.getElementById('div1');
-      div1.textContent = `1 USD = ${rate} KRW`;
+      const div2 = document.getElementById('div2');
+      div1.textContent = `USD KRW Exchange Rate`;
+      div2.textContent = `1 USD = ${rate} KRW`;
     })
     .catch(error => console.error(error));
 }
